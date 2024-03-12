@@ -1,0 +1,25 @@
+{
+  "name": "bhoopatparmar/magento2-webshipper",
+  "description": "Webshipper Magento2 Module",
+	"type": "magento2-module",
+	"version": "1.0.0",
+	"require": {
+		"php": "~7.4.0|~8.1.0",
+		"bhoopatparmar/magento2-shipping": "dev-master"
+	},
+	"replace": {
+		"wexo/module-webshipper": "*"
+	},
+	"license": [
+		"OSL-3.0",
+		"AFL-3.0"
+	],
+	"autoload": {
+		"files": [
+			"registration.php"
+		],
+		"psr-4": {
+			"Salecto\\Webshipper\\": ""
+		}
+	}
+}
