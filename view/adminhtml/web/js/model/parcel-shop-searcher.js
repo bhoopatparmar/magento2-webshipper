@@ -13,7 +13,8 @@ define([
 
         $('body').trigger('processStart');
         let currentShippingMethod = $("#shipping-method-additional-load").data('current-shipping-method');
-        let shippingAddress = this.source.shippingAddress.data;
+        let shippingAddress = currentShippingMethod && currentShippingMethod.shippingAddress.data ? currentShippingMethod.shippingAddress.data : this.source.shippingAddress.data;
+
         shippingAddress.countryId = shippingCountryId;
         return storage.get('/rest/V1/wexo-webshipper/get-parcel-shops?' + $.param({
             country: shippingCountryId,
